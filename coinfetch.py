@@ -4,6 +4,8 @@
 # Feel free to modify
 # So generous: DGSWzqyofHC6YDSA34hwVQpWGQHnzJm1sk
 #
+# The findthatcoin inputs are all in the form btc_usd, <coin1_coin2>
+#
 # Remember to make this file executable ( "$chmod +x ./coinfetch" )
 
 import requests
