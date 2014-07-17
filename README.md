@@ -1,4 +1,4 @@
 dogefetch
 =========
 
-A dogecoin price fetcher written in python
+A dogecoin price fetcher written in python.
