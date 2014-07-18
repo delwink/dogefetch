@@ -10,5 +10,5 @@ A python script that is capable of printing almost all cryptocoin prices in term
 Licensing
 ---------
 
-This script is licensed under the terms of the MIT license. See LICENSE for more
-information.
+This script is free software, licensed under the terms of the MIT license. See 
+LICENSE for more information.
