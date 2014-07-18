@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Wow such python
 # Feel free to modify
@@ -6,8 +6,8 @@
 #
 # Remember to make this file executable ( "$chmod +x ./dogefetch1" )
 #
-# To add other coins, use the template below, and modify the while
-# loop accordingly.
+# To add other coins, use the template below, and modify the coinget
+# function accordingly.
 #
 ###########################################################
 #
@@ -19,7 +19,7 @@
 #
 #############################################################
 
-import requests
+import requests, sys
 
 def doge_usd():
 	"""
@@ -48,24 +48,32 @@ def ltc_usd():
 	out = r.json()['avg']
 	return out
 
-while True:
-	coin = raw_input("DOGE-USD [wow], LTC-USD [l], BTC-USD [b]? ")
-	if coin == "wow":
-		print "1 DOGE = $" + str(doge_usd())
-		break
-	elif coin == "l":
-		print "1 LTC = $" + str(ltc_usd())
-		break
+def coinget(coin):
+	"""
+	l 	-	ltc
+	b 	-	btc
+	wow -	doge
+	all -	all
+	"""
+	if coin == "l":
+		print ("$"+str(ltc_usd()))
+	elif coin == "lwow" or coin == "wowl":
+		print ("LTC: $"+str(ltc_usd())+" DOGE: $"+str(doge_usd()))
+	elif coin == "lb" or coin == "bl":
+		print ("BTC: $"+str(btc_usd())+" LTC: $"+str(ltc_usd()))
 	elif coin == "b":
-		print "1 BTC = $" + str(btc_usd())
-		break
-	print "Invalid input (this is case sensitive!)"
+		print ('$'+str(btc_usd()))
+	elif coin == "bwow" or coin == "wowb":
+		print ("BTC: $"+str(btc_usd())+" DOGE: $"+str(doge_usd()))
+	elif coin == "wow":
+		print ('$'+str(doge_usd()))
+	elif coin == "all":
+		print ("BTC: $"+str(btc_usd())+" LTC: $"+str(ltc_usd())+" DOGE: $"+str(doge_usd()))
+	else:
+		exit("Invalid input")
 
-# Return dogecoin value:
-# print doge_usd()
-#
-# Return lightcoin value:
-# print ltc_usd()
-#
-# Return bitcoin value:
-# print btc_usd()
+try:
+	coinget(sys.argv[1])
+except IndexError:
+	exit("Enter an argument!! < b, l, wow, all >")
+
