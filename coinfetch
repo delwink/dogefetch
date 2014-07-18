@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+
+# Wow such python
+# Feel free to modify
+# So generous: DGSWzqyofHC6YDSA34hwVQpWGQHnzJm1sk
+#
+# The coinfetch function inputs are all in the form btc_usd, <coin1_coin2>
+#
+# Remember to make this file executable ( "$chmod +x ./coinfetch" )
+
+import requests, sys
+
+def coinfetch(coin):
+	"""
+	Fetch a coin
+	"""
+	url = 'http://data.bter.com/api/1/tickers'
+	r = requests.get(url)
+	out = r.json()[coin]['avg']
+	return out
+		
+try:
+	print (coinfetch(sys.argv[1]))	
+except KeyError:
+	print ("String not found, try swapping the coins around?")
+except IndexError:
+	exit("Enter an argument!!")
