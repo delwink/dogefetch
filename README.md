@@ -26,6 +26,34 @@ Bitcoin and Litecoin.
 
 Example: `dogefetch lwow`
 
+Using coinfetch
+---------------
+
+coinfetch takes two arguments from the command line, and returns a conversion factor.
+
+The arguments are the three (or sometimes four) letter identifiers of various currencies.
+
+Many (but not all) pairs of coins can be used.
+
+Example: `$ coinfetch doge btc`
+
+The above example will return the amount of Bitcoin that can currently be bought with one
+Dogecoin. 
+
+If the coins are reversed (e.g. 'coinfetch btc doge' ), the amount of Dogecoin
+that can currently be bought with one Bitcoin will be returned.
+
+Installation
+------------
+
+To install dogefetch:
+
+`$ chmod +x ./dogefetch && sudo cp ./dogefetch /usr/local/bin/`
+
+To install coinfetch:
+
+`$ chmod +x ./coinfetch && sudo cp ./coinfetch /usr/local/bin/`
+
 Licensing
 ---------
 
