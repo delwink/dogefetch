@@ -1,12 +1,7 @@
 dogefetch
 =========
 
-dogefetch:
-A dogecoin price fetcher written in python.
-
-coinfetch:
-A python script that is capable of printing almost all cryptocoin prices in
-terms of other coins (and fiat money).
+See [INSTALL](INSTALL) for installation instructions.
 
 Using `dogefetch`
 -----------------
@@ -24,35 +19,26 @@ Using `dogefetch`
 These can also be obtained in pairs. For example, `lb` gets the price of both
 Bitcoin and Litecoin.
 
-Example: `dogefetch lwow`
+Example: `$ dogefetch lwow`
 
-Using coinfetch
----------------
+Using `coinfetch`
+-----------------
 
-coinfetch takes two arguments from the command line, and returns a conversion factor.
+coinfetch takes two arguments from the command line, and returns a conversion 
+factor.
 
-The arguments are the three (or sometimes four) letter identifiers of various currencies.
+The arguments are the three (or sometimes four) letter identifiers of various 
+currencies.
 
 Many (but not all) pairs of coins can be used.
 
 Example: `$ coinfetch doge btc`
 
-The above example will return the amount of Bitcoin that can currently be bought with one
-Dogecoin. 
+The above example will return the amount of Bitcoin that can currently be bought
+with one Dogecoin. 
 
-If the coins are reversed (e.g. 'coinfetch btc doge' ), the amount of Dogecoin
+If the coins are reversed (e.g. `$ coinfetch btc doge`), the amount of Dogecoin
 that can currently be bought with one Bitcoin will be returned.
-
-Installation
-------------
-
-To install dogefetch:
-
-`$ chmod +x ./dogefetch && sudo cp ./dogefetch /usr/local/bin/`
-
-To install coinfetch:
-
-`$ chmod +x ./coinfetch && sudo cp ./coinfetch /usr/local/bin/`
 
 Licensing
 ---------
