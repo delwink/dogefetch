@@ -48,11 +48,11 @@ Installation
 
 To install dogefetch:
 
-<code>$ chmod +x ./dogefetch && sudo cp ./dogefetch /usr/bin/local/</code>
+<code>$ chmod +x ./dogefetch && sudo cp ./dogefetch /usr/local/bin/</code>
 
 To install coinfetch:
 
-<code>$ chmod +x ./coinfetch && sudo cp ./coinfetch /usr/bin/local/</code>
+<code>$ chmod +x ./coinfetch && sudo cp ./coinfetch /usr/local/bin/</code>
 
 Licensing
 ---------
