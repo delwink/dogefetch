@@ -75,5 +75,4 @@ def coinget(coin):
 try:
 	coinget(sys.argv[1])
 except IndexError:
-	print_usage()
-	exit(1)
+	exit("Enter an argument!! < b, l, wow, all >")
