@@ -1,0 +1,9 @@
+Installing the scripts
+----------------------
+
+Installing dogefetch or coinfetch can be done automatically with make.
+
+# make EXEC=(x)
+
+(x) should be either "dogefetch" or "coinfetch" (without quotes) to select which
+script to install.
