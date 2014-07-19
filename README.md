@@ -24,7 +24,7 @@ dogefetch takes one argument from the command line:
 It is possible to fetch two values. For example, lwow will return the prices of both
 LTC and DOGE.
 
-Example: 'dogefetch bl'
+Example: <code>$ dogefetch bl</code>
 
 Using coinfetch
 ---------------
@@ -35,13 +35,24 @@ The arguments are the three (or sometimes four) letter identifiers of various cu
 
 Many (but not all) pairs of coins can be used.
 
-Example: 'coinfetch doge btc'
+Example: <code>$ coinfetch doge btc</code>
 
 The above example will return the amount of Bitcoin that can currently be bought with one
 Dogecoin. 
 
 If the coins are reversed (e.g. 'coinfetch btc doge' ), the amount of Dogecoin
 that can currently be bought with one Bitcoin will be returned.
+
+Installation
+------------
+
+To install dogefetch:
+
+<code>$ chmod +x ./dogefetch && sudo cp ./dogefetch /usr/bin/local/</code>
+
+To install coinfetch:
+
+<code>$ chmod +x ./coinfetch && sudo cp ./coinfetch /usr/bin/local/</code>
 
 Licensing
 ---------
