@@ -4,7 +4,7 @@
 # Feel free to modify
 # So generous: DGSWzqyofHC6YDSA34hwVQpWGQHnzJm1sk
 #
-# Remember to make this file executable ( "$chmod +x ./dogefetch1" )
+# Remember to make this file executable ( "$chmod +x ./dogefetch" )
 #
 # To add other coins, use the template below, and modify the coinget
 # function accordingly.
@@ -75,5 +75,5 @@ def coinget(coin):
 try:
 	coinget(sys.argv[1])
 except IndexError:
-	exit("Enter an argument!! < b, l, wow, all >")
-
+	print_usage()
+	exit(1)
