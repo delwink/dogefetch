@@ -1,3 +1,4 @@
+EXEC=dogefetch
 PREFIX=/usr/local
 
 install:
