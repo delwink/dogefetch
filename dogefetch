@@ -58,8 +58,12 @@ def doge_usd():
     """
     url = 'http://data.bter.com/api/1/ticker/doge_usd'
     r = requests.get(url)
-    out = (r.json()['avg'])
-#   out *= btc_usd()
+    out = r.json()['avg']
+    if float (out) == 0.0:
+        url = 'http://data.bter.com/api/1/ticker/doge_btc'
+        r = requests.get(url)
+        out = float (r.json()['avg'])
+        out *= btc_usd()
     return out
     
 def btc_usd():
@@ -78,7 +82,11 @@ def ltc_usd():
     url = 'http://data.bter.com/api/1/ticker/ltc_usd'
     r = requests.get(url)
     out = (r.json()['avg'])
-#   out *= btc_usd()
+    if float (out) == 0.0:
+        url = 'http://data.bter.com/api/1/ticker/ltc_btc'
+        r = requests.get(url)
+        out = float (r.json()['avg'])
+        out *= btc_usd()
     return out
 
 def coinget(coin):
